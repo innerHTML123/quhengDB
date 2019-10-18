@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/www/css/style.css">
+</head>
+<body>
+<ul id="ul1">
+    <li><img src="/www/img/add.ico" alt=""><a href="/addBook">添加</a></li>
+    <li><img src="/www/img/change.ico" alt=""><a href="#">修改</a></li>
+    <li><img src="/www/img/delete.ico" alt=""><a href="#">删除</a></li>
+    <li><img src="/www/img/基础分类.ico" alt=""><a href="#">统计</a></li>
+</ul>
+<br>
+<table border="1">
+    <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>用户</th>
+        <th>籍贯</th>
+        <th>发布时间</th>
+        <th>是否审核</th>
+        <th>操作</th>
+    </tr>
+    {{each list}}
+    <tr>
+        <td>{{$value.infoId}}</td>
+        <td>{{$value.infotitle}}</td>
+        <td>{{$value.userinfo}}</td>
+        <td>{{$value.address}}</td>
+        <td>{{$value.date1}}</td>
+        <td>{{$value.shenhe}}</td>
+        <td><a href="#">查看</a><a href="#">删除</a></td>
+    </tr>
+    {{/each}}
+</table>
+<a href="/fenye?cz=prev">上一页</a>
+<a href="/fenye?num=1">1</a>
+<a href="/fenye?num=2">2</a>
+<a href="/fenye?num=3">3</a>
+<a href="/fenye?num=4">4</a>
+<a href="/fenye?num=5">5</a>
+<a href="/fenye?num=6">6</a>
+<a href="/fenye?cz=next">下一页</a>
+</body>
+</html>

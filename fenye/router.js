@@ -1,0 +1,10 @@
+const express=require('express');
+const router=express.Router();
+const service=require('./service.js');
+router.use('/www',express.static('views'));
+router.get('/',service.showIndex);
+router.post('/biaoge',service.showBiao);
+router.get('/addBook',service.showTian);
+router.post('/tianjia',service.showJia);
+router.get('/fenye',service.showList);
+module.exports=router;
